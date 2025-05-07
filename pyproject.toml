@@ -1,0 +1,22 @@
+[project]
+name = "pythonproject"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "david-streamlio",email = "35466513+david-streamlio@users.noreply.github.com"}
+]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pulsar-client (>=3.6.0)",
+    "fastapi (>=0.61.1,<0.61.2)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+hypercorn = "^0.17.3"
+
