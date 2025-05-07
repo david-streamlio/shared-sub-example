@@ -12,15 +12,14 @@ apachepulsar/pulsar:4.0.4 \
 bin/pulsar standalone
 ```
 
-2. Run the Application using hyercorn
+2. If you want to run the asyncio version, then use the following command.
 
 ```bash
- poetry run hypercorn shared_sub.main:app --reload
+ poetry run hypercorn shared_sub.asyncio:app --reload
 ```
 
-3. Publish messages to the topic
+3. If you want to run the process version, then use the following command.
 
 ```bash
-docker exec pulsar \
-  bin/pulsar-client produce -n 10 -m "Foo bar" public/default/test
+poetry run python shared_sub/process.py
 ```
